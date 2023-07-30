@@ -1,0 +1,18 @@
+#include <iostream>
+
+#ifndef LANG_BRIDGE_${language_upper}_H
+#define LANG_BRIDGE_${language_upper}_H
+
+#define ${if} if
+#define ${else} else
+#define ${while} while
+#define ${print} std::cout
+#define ${input} std::cin
+#define ${for} for
+#define ${return} return
+#define ${break} break
+#define ${continue} continue
+#define ${true} true
+#define ${false} false
+
+#endif /* LANG_BRIDGE_${language_upper}_H */

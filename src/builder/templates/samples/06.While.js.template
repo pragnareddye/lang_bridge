@@ -1,0 +1,5 @@
+${var} count_down = 3;
+
+${while}(count_down>0) {
+  ${print}(count_down--);
+}

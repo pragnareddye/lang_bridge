@@ -1,0 +1,7 @@
+${var} name = "Pragna"
+
+${if} (name === "Pragna") {
+  ${print}("Hi Pragna!");
+} ${else} {
+  ${print}("I don't know a " + name);
+}

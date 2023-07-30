@@ -1,0 +1,37 @@
+# ${language_titled}
+
+`${if}`: if
+
+`${else}`: else
+
+`${while}`: while
+
+`${print}`: print
+
+`${return}`: return
+
+`${break}`: break
+
+`${continue}`: continue
+
+`${true}`: true
+
+`${false}`: false
+
+`${do}`: do
+
+`${var}`: var
+
+`${null}`: null
+
+`${function}`: function
+
+`${for}`: for
+
+`${input}`: input
+
+### [Try it Online Now!](https://sai.onl/lang_bridge/try/index.html#${language})
+
+## JS Examples
+
+${js_samples}

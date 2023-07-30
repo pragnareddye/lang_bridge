@@ -1,0 +1,30 @@
+{
+  "name": "lang_bridge",
+  "version": "1.0.0",
+  "description": "An intro to programming for non-English speakers.",
+  "main": "build.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "clean": "rm -rf ./build",
+    "build": "rm -rf ./build; mkdir ./build; ./src/builder/build.js && rollup --config && ./src/docs_html_generator/build.sh"
+  },
+  "author": "Sai Pragna Etikyala",
+  "license": "MIT",
+  "dependencies": {
+    "@codemirror/lang-javascript": "^6.1.9",
+    "@sweet-js/core": "^3.0.13",
+    "codemirror": "^6.0.1",
+    "node-html-markdown": "^1.3.0"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^25.0.2",
+    "@rollup/plugin-json": "^6.0.0",
+    "@rollup/plugin-node-resolve": "^15.1.0",
+    "@web/rollup-plugin-html": "^2.0.0",
+    "markdown-to-html": "^0.0.13",
+    "rollup": "^3.26.2",
+    "rollup-plugin-node-polyfills": "^0.2.1"
+  }
+}

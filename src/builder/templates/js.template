@@ -1,0 +1,73 @@
+'lang sweet.js';
+
+// null
+export syntax ${null} = ctx => #`null`
+
+// true
+export syntax ${true} = ctx => #`true`
+
+// false
+export syntax ${false} = ctx => #`false`
+
+// var
+export syntax ${var} = ctx => #`var`
+
+// while
+export syntax ${while} = ctx => #`while`
+
+// console.log
+export syntax ${print} = ctx => #`console.log ${ctx.next().value}`
+
+// prompt (only works on browser right now)
+export syntax ${input} = ctx => #`prompt ${ctx.next().value}`
+
+// function
+export syntax ${function} = ctx => #`function`
+
+// for and foreach loop
+export syntax ${for} = ctx => #`for`
+
+// return
+export syntax ${return} = ctx => #`return ${ctx.next().value}`
+
+// break
+export syntax ${break} = ctx => #`break`;
+
+// if
+export syntax ${if} = ctx => {
+  var readIf = true;
+  var count = 2;
+  var result = #`if ${ctx.next().value} ${ctx.next().value} `;
+  while(readIf) {
+    readIf = false;
+    var possible_else_or_elseif = ctx.next()
+    var possible_if_or_else_block = ctx.next()
+      
+    if (!possible_else_or_elseif || !possible_else_or_elseif.value || 
+        !possible_else_or_elseif.value.value || !possible_if_or_else_block) {
+      break;
+    }
+    if (possible_else_or_elseif.value.value.token.value === "${else}") {
+      if (possible_if_or_else_block.value.value && possible_if_or_else_block.value.value.token.value === "${if}") {
+        count +=4
+        result = result.concat(#`else if ${ctx.next().value} ${ctx.next().value} `);
+        readIf = true;
+      } else {
+        count+=2;
+        result = result.concat(#`else ${possible_if_or_else_block.value} `);
+      }
+    } 
+  }
+  ctx.reset();
+  while (--count >= 0) ctx.next();
+  return result;
+}
+
+//do while
+export syntax ${do} = ctx => {
+  let do_block = ctx.next().value;
+  let while_keyword = ctx.next().value;
+  if(while_keyword && while_keyword.value.token.value === "${while}") {
+    return #`do ${do_block} while ${ctx.next().value}`;
+  }
+}

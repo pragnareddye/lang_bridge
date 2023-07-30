@@ -1,0 +1,6 @@
+${var} names = ["Sai", "Pragna", "Etikyala"]
+
+// print each name to screen
+${for}(name in names) {
+  ${print}(name)
+}

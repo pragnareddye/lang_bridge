@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- <script src="https://www.sweetjs.org/browser/scripts/sweet.js"></script> -->
+</head>
+
+<body class="bg-[#2f343f] h-screen">
+  <main class="grid grid-cols-1 md:grid-cols-2 h-full overflow-y-auto">
+    <div class="md:overflow-y-auto md:pb-10 h-1/2md:h-full" id="editor">
+      <!-- Content for the left column goes here -->
+    </div>
+    <div class="inline-block md:hidden bg-gray-800 text-white p-2 mt-auto h-min">Output</div>
+    <div class="md:overflow-y-auto pb-10 h-1/2md:h-full" id="output">
+      <!-- Content for the right column goes here -->
+    </div>
+  </main>
+  <footer class="bg-gray-800 text-white p-2 fixed bottom-0 w-full flex">
+    <button id="execute_button" class="inline-flex rounded-lg text-black bg-slate-200 px-1">Execute</button>
+    <label for="languages" class="hidden md:inline-flex ml-10 text-sm font-medium text-gray-300">Language</label>
+    <select id="languages" class="ml-5 md:ml-3 text-sm bg-gray-700 border-gray-600 focus:ring-blue-500 focus:border-blue-500 text-white">
+      <option selected>Unknown</option>
+    </select>
+    <label for="code_examples" class="hidden md:inline-flex ml-10 text-sm font-medium text-gray-300">Examples</label>
+    <select id="code_examples" class="ml-5 md:ml-3 text-sm bg-gray-700 border-gray-600 focus:ring-blue-500 focus:border-blue-500 text-white">
+      <option selected>Load Examples</option>
+    </select>
+    <label class="ml-5 md:ml-10 relative inline-flex items-center cursor-pointer">
+      <input type="checkbox" id="transpile_only" class="sr-only peer">
+      <div class="w-9 h-5 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
+      <span class="hidden md:inline-flex ml-3 text-sm font-medium text-gray-300">Transpile Only</span>
+    </label>
+  </footer>
+  <script src="index.mjs"></script>
+</body>
+
+</html>
