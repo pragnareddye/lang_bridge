@@ -18,6 +18,20 @@ int main() {
 
 ### [Try it Online Now!](https://sai.onl/lang_bridge/try)
 
+[//]: # "START: Auto-generated Languages"
+
+## Languages
+
+[Arabic](docs/arabic.md)
+
+[Kannada](docs/kannada.md)
+
+[Malayalam](docs/malayalam.md)
+
+[Telugu](docs/telugu.md)
+
+[//]: # "END: Auto-generated Languages"
+
 ## Getting Started
 
 The Lang Bridge is config driven. As an educator one can provide native alternatives to the English keywords that will help the student better get started. Once the configuration file is ready running the build tool should generate language specific run libraries the students can use.

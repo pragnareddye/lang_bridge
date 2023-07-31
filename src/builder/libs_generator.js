@@ -63,7 +63,27 @@ function generate_md(language, keywords, samples) {
   };
 }
 
+function generate_readme_md(languages_list) {
+  const readme_language_template = fs.readFileSync('./src/builder/templates/README.language.md.template', 'utf8');
+  languages_md = [];
+  for (var language of languages_list) {
+    var language_md = readme_language_template;
+    var language_titled = language.charAt(0).toUpperCase() + language.substring(1);
+    language_md = language_md.replaceAll(`\${language}`, language);
+    language_md = language_md.replaceAll(`\${language_titled}`, language_titled);
+    languages_md.push(language_md);
+  }
+  var languages = languages_md.join('\n\n');
+  var content = fs.readFileSync('./src/builder/templates/README.languages.md.template', 'utf8');
+  content = content.replaceAll(`\${languages}`, languages);
+  return [{
+    part: 'Auto-generated Languages',
+    content: content
+  }];
+}
+
 exports.generate_js_map = generate_js_map;
 exports.generate_cpp_map = generate_cpp_map;
 exports.generate_samples = generate_samples;
 exports.generate_md = generate_md;
+exports.generate_readme_md = generate_readme_md;

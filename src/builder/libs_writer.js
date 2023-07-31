@@ -12,6 +12,32 @@ function parse_config(data) {
   return keywords;
 }
 
+function replace_auto_generated_content(data, replacements) {
+  lines = data.split(/\r?\n/);
+  new_data = [];
+  replacement_context = null;
+  replacement_content = null;
+  lines.forEach(line => {
+    if (replacement_content && line.includes('END: ' + replacement_context)) {
+      new_data.push('', replacement_content, '');
+      replacement_context = null;
+      replacement_content = null;
+    }
+    if (!replacement_context) {
+      new_data.push(line);
+      if (line.includes('[//]')) {
+        for (var replacement of replacements) {
+          if (line.includes('START: ' + replacement.part)) {
+            replacement_context = replacement.part;
+            replacement_content = replacement.content;
+          }
+        }
+      }
+    }
+  });
+  return new_data.join('\n');
+}
+
 function build() {
   var lang_bridge_constants = {}
   fs.readdirSync('dicts/').forEach(file => {
@@ -31,10 +57,17 @@ function build() {
       samples: samples,
     };
   });
+
   var lang_bridge_constants_content = `const lang_bridge_constants = ` +
-  `  ${JSON.stringify(lang_bridge_constants)};\n\n` +
-  `export { lang_bridge_constants }`;
+    `  ${JSON.stringify(lang_bridge_constants)};\n\n` +
+    `export { lang_bridge_constants }`;
   fs.writeFileSync('./build/lang_bridge_constants.js', lang_bridge_constants_content);
+
+  var readme_filename = './README.md';
+  var readme_content = replace_auto_generated_content(
+    fs.readFileSync(readme_filename, 'utf-8'),
+    generators.generate_readme_md(Object.keys(lang_bridge_constants)));
+  fs.writeFileSync(readme_filename, readme_content);
 }
 
 exports.build = build
