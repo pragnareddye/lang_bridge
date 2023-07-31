@@ -1,36 +1,6 @@
 # Arabic
 
-`sahihun`: if
-
-`akhar`: else
-
-`eindama`: while
-
-`yaqul`: print
-
-`yueti`: return
-
-`nilisu`: break
-
-`wasal`: continue
-
-`sahih`: true
-
-`khata`: false
-
-`yafeal`: do
-
-`hayz`: var
-
-`farigh`: null
-
-`eamil`: function
-
-`iilaa`: for
-
-`bisal`: input
-
-### [Try it Online Now!](https://sai.onl/lang_bridge/try#arabic)
+[Try it Online Now!](https://sai.onl/lang_bridge/try#arabic)
 
 ## JS Examples
 
@@ -40,7 +10,6 @@
 yaqul("Hello World");
 ```
 
-
 ### Variables
 
 ```javascript
@@ -49,7 +18,6 @@ hayz name = "Sai"
 // print to screen
 yaqul(name)
 ```
-
 
 ### For Loop
 
@@ -61,7 +29,6 @@ iilaa(name in names) {
   yaqul(name)
 }
 ```
-
 
 ### If-Else
 
@@ -75,7 +42,6 @@ sahihun (name === "Pragna") {
 }
 ```
 
-
 ### Function
 
 ```javascript
@@ -86,7 +52,6 @@ eamil greet(name) {
 greet("Pragna");
 ```
 
-
 ### While
 
 ```javascript
@@ -96,7 +61,6 @@ eindama(count_down>0) {
   yaqul(count_down--);
 }
 ```
-
 
 ### Prime Number
 
@@ -127,3 +91,35 @@ eamil is_prime(num) {
 yaqul(is_prime(23));
 ```
 
+
+## Keywords
+
+`sahihun`: if
+
+`akhar`: else
+
+`eindama`: while
+
+`yaqul`: print
+
+`yueti`: return
+
+`nilisu`: break
+
+`wasal`: continue
+
+`sahih`: true
+
+`khata`: false
+
+`yafeal`: do
+
+`hayz`: var
+
+`farigh`: null
+
+`eamil`: function
+
+`iilaa`: for
+
+`bisal`: input

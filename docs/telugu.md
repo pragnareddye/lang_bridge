@@ -1,36 +1,6 @@
 # Telugu
 
-`ayite`: if
-
-`mari`: else
-
-`unnapudu`: while
-
-`cheppu`: print
-
-`tirigi`: return
-
-`aapu`: break
-
-`konasagincu`: continue
-
-`nijam`: true
-
-`tappu`: false
-
-`cheyyu`: do
-
-`nilva`: var
-
-`khali`: null
-
-`pani`: function
-
-`kosam`: for
-
-`adagu`: input
-
-### [Try it Online Now!](https://sai.onl/lang_bridge/try#telugu)
+[Try it Online Now!](https://sai.onl/lang_bridge/try#telugu)
 
 ## JS Examples
 
@@ -40,7 +10,6 @@
 cheppu("Hello World");
 ```
 
-
 ### Variables
 
 ```javascript
@@ -49,7 +18,6 @@ nilva name = "Sai"
 // print to screen
 cheppu(name)
 ```
-
 
 ### For Loop
 
@@ -61,7 +29,6 @@ kosam(name in names) {
   cheppu(name)
 }
 ```
-
 
 ### If-Else
 
@@ -75,7 +42,6 @@ ayite (name === "Pragna") {
 }
 ```
 
-
 ### Function
 
 ```javascript
@@ -86,7 +52,6 @@ pani greet(name) {
 greet("Pragna");
 ```
 
-
 ### While
 
 ```javascript
@@ -96,7 +61,6 @@ unnapudu(count_down>0) {
   cheppu(count_down--);
 }
 ```
-
 
 ### Prime Number
 
@@ -127,3 +91,35 @@ pani is_prime(num) {
 cheppu(is_prime(23));
 ```
 
+
+## Keywords
+
+`ayite`: if
+
+`mari`: else
+
+`unnapudu`: while
+
+`cheppu`: print
+
+`tirigi`: return
+
+`aapu`: break
+
+`konasagincu`: continue
+
+`nijam`: true
+
+`tappu`: false
+
+`cheyyu`: do
+
+`nilva`: var
+
+`khali`: null
+
+`pani`: function
+
+`kosam`: for
+
+`adagu`: input

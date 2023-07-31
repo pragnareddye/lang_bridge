@@ -1,5 +1,13 @@
 # ${language_titled}
 
+[Try it Online Now!](https://sai.onl/lang_bridge/try#${language})
+
+## JS Examples
+
+${js_samples}
+
+## Keywords
+
 `${if}`: if
 
 `${else}`: else
@@ -29,9 +37,3 @@
 `${for}`: for
 
 `${input}`: input
-
-### [Try it Online Now!](https://sai.onl/lang_bridge/try#${language})
-
-## JS Examples
-
-${js_samples}

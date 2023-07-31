@@ -1,36 +1,6 @@
 # Malayalam
 
-`athava`: if
-
-`allenkil`: else
-
-`athavumbo`: while
-
-`para`: print
-
-`ayaki`: return
-
-`nikki`: break
-
-`thudaruka`: continue
-
-`shari`: true
-
-`thettu`: false
-
-`cheyyu`: do
-
-`orma`: var
-
-`illatha`: null
-
-`joli`: function
-
-`lup`: for
-
-`chodiki`: input
-
-### [Try it Online Now!](https://sai.onl/lang_bridge/try#malayalam)
+[Try it Online Now!](https://sai.onl/lang_bridge/try#malayalam)
 
 ## JS Examples
 
@@ -40,7 +10,6 @@
 para("Hello World");
 ```
 
-
 ### Variables
 
 ```javascript
@@ -49,7 +18,6 @@ orma name = "Sai"
 // print to screen
 para(name)
 ```
-
 
 ### For Loop
 
@@ -61,7 +29,6 @@ lup(name in names) {
   para(name)
 }
 ```
-
 
 ### If-Else
 
@@ -75,7 +42,6 @@ athava (name === "Pragna") {
 }
 ```
 
-
 ### Function
 
 ```javascript
@@ -86,7 +52,6 @@ joli greet(name) {
 greet("Pragna");
 ```
 
-
 ### While
 
 ```javascript
@@ -96,7 +61,6 @@ athavumbo(count_down>0) {
   para(count_down--);
 }
 ```
-
 
 ### Prime Number
 
@@ -127,3 +91,35 @@ joli is_prime(num) {
 para(is_prime(23));
 ```
 
+
+## Keywords
+
+`athava`: if
+
+`allenkil`: else
+
+`athavumbo`: while
+
+`para`: print
+
+`ayaki`: return
+
+`nikki`: break
+
+`thudaruka`: continue
+
+`shari`: true
+
+`thettu`: false
+
+`cheyyu`: do
+
+`orma`: var
+
+`illatha`: null
+
+`joli`: function
+
+`lup`: for
+
+`chodiki`: input

@@ -1,5 +1,21 @@
 # The Programming Lang Bridge
 
+[//]: # "START: Auto-generated Languages"
+
+## Languages
+
+[Arabic](docs/arabic.md)
+
+[Kannada](docs/kannada.md)
+
+[Malayalam](docs/malayalam.md)
+
+[Telugu](docs/telugu.md)
+
+[//]: # "END: Auto-generated Languages"
+
+## Motivation
+
 As trained programmers no matter our native toungues we're able to pick up and get started writing code. In this modern day and age programming is more of a necessity. To help bridge the gap and get people started on coding we could start by bringing the language one step closer to students and bridging the gap.
 
 ## Hello World (Kannada)
@@ -15,22 +31,6 @@ int main() {
     helu << "Hello World!";
 }
 ```
-
-### [Try it Online Now!](https://sai.onl/lang_bridge/try)
-
-[//]: # "START: Auto-generated Languages"
-
-## Languages
-
-[Arabic](docs/arabic.md)
-
-[Kannada](docs/kannada.md)
-
-[Malayalam](docs/malayalam.md)
-
-[Telugu](docs/telugu.md)
-
-[//]: # "END: Auto-generated Languages"
 
 ## Getting Started
 

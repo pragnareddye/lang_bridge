@@ -1,36 +1,6 @@
 # Kannada
 
-`nijavidre`: if
-
-`athava`: else
-
-`nijvaga`: while
-
-`helu`: print
-
-`kodu`: return
-
-`nilisu`: break
-
-`muduvarisi`: continue
-
-`sari`: true
-
-`thapu`: false
-
-`madu`: do
-
-`nenapu`: var
-
-`khali`: null
-
-`kelsa`: function
-
-`lup`: for
-
-`kelu`: input
-
-### [Try it Online Now!](https://sai.onl/lang_bridge/try#kannada)
+[Try it Online Now!](https://sai.onl/lang_bridge/try#kannada)
 
 ## JS Examples
 
@@ -40,7 +10,6 @@
 helu("Hello World");
 ```
 
-
 ### Variables
 
 ```javascript
@@ -49,7 +18,6 @@ nenapu name = "Sai"
 // print to screen
 helu(name)
 ```
-
 
 ### For Loop
 
@@ -61,7 +29,6 @@ lup(name in names) {
   helu(name)
 }
 ```
-
 
 ### If-Else
 
@@ -75,7 +42,6 @@ nijavidre (name === "Pragna") {
 }
 ```
 
-
 ### Function
 
 ```javascript
@@ -86,7 +52,6 @@ kelsa greet(name) {
 greet("Pragna");
 ```
 
-
 ### While
 
 ```javascript
@@ -96,7 +61,6 @@ nijvaga(count_down>0) {
   helu(count_down--);
 }
 ```
-
 
 ### Prime Number
 
@@ -127,3 +91,35 @@ kelsa is_prime(num) {
 helu(is_prime(23));
 ```
 
+
+## Keywords
+
+`nijavidre`: if
+
+`athava`: else
+
+`nijvaga`: while
+
+`helu`: print
+
+`kodu`: return
+
+`nilisu`: break
+
+`muduvarisi`: continue
+
+`sari`: true
+
+`thapu`: false
+
+`madu`: do
+
+`nenapu`: var
+
+`khali`: null
+
+`kelsa`: function
+
+`lup`: for
+
+`kelu`: input
