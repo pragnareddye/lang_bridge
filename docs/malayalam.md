@@ -30,7 +30,7 @@
 
 `chodiki`: input
 
-### [Try it Online Now!](https://sai.onl/lang_bridge/try/index.html#malayalam)
+### [Try it Online Now!](https://sai.onl/lang_bridge/try#malayalam)
 
 ## JS Examples
 

@@ -30,7 +30,7 @@
 
 `bisal`: input
 
-### [Try it Online Now!](https://sai.onl/lang_bridge/try/index.html#arabic)
+### [Try it Online Now!](https://sai.onl/lang_bridge/try#arabic)
 
 ## JS Examples
 

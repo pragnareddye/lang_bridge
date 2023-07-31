@@ -30,7 +30,7 @@
 
 `adagu`: input
 
-### [Try it Online Now!](https://sai.onl/lang_bridge/try/index.html#telugu)
+### [Try it Online Now!](https://sai.onl/lang_bridge/try#telugu)
 
 ## JS Examples
 

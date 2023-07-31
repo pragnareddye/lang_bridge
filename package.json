@@ -8,7 +8,8 @@
   },
   "scripts": {
     "clean": "rm -rf ./build",
-    "build": "rm -rf ./build; mkdir ./build; ./src/builder/build.js && rollup --config && ./src/docs_html_generator/build.sh"
+    "build": "rm -rf ./build; mkdir ./build; ./src/builder/build.js && rollup --config && ./src/docs_html_generator/build.sh",
+    "demo": "npm run build && http-server ./build/www"
   },
   "author": "Sai Pragna Etikyala",
   "license": "MIT",
@@ -23,6 +24,7 @@
     "@rollup/plugin-json": "^6.0.0",
     "@rollup/plugin-node-resolve": "^15.1.0",
     "@web/rollup-plugin-html": "^2.0.0",
+    "http-server": "14.1.1",
     "markdown-to-html": "^0.0.13",
     "rollup": "^3.26.2",
     "rollup-plugin-node-polyfills": "^0.2.1"

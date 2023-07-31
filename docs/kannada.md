@@ -30,7 +30,7 @@
 
 `kelu`: input
 
-### [Try it Online Now!](https://sai.onl/lang_bridge/try/index.html#kannada)
+### [Try it Online Now!](https://sai.onl/lang_bridge/try#kannada)
 
 ## JS Examples
 
