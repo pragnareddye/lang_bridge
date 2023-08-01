@@ -1,5 +1,5 @@
-${var} count_down = 3;
+${var} ${var.counter} = 3;
 
-${while}(count_down>0) {
-  ${print}(count_down--);
+${while}(${var.counter}>0) {
+  ${print}(${var.counter}--);
 }

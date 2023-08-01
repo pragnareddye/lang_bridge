@@ -7,88 +7,81 @@
 ### Hello
 
 ```javascript
-helu("Hello World");
+helu('ಹಲೋ ವರ್ಲ್ಡ್!');
 ```
 
 ### Variables
 
 ```javascript
-nenapu name = "Sai"
+nenapu hesaru = "Sai"
 
-// print to screen
-helu(name)
+helu(hesaru);
 ```
 
 ### For Loop
 
 ```javascript
-nenapu names = ["Sai", "Pragna", "Etikyala"]
+nenapu hesarugalu = ["Sai", "Pragna", "Etikyala"];
 
-// print each name to screen
-lup(name in names) {
-  helu(name)
+lup(hesaru in hesarugalu) {
+  helu(hesaru);
 }
 ```
 
 ### If-Else
 
 ```javascript
-nenapu name = "Pragna"
+nenapu hesaru = "Pragna"
 
-nijavidre (name === "Pragna") {
-  helu("Hi Pragna!");
+nijavidre (hesaru === "Pragna") {
+  helu('ಹಲೋ ' + hesaru + '!');
 } athava {
-  helu("I don't know a " + name);
+  helu('ನನಗೆ ' + hesaru + ' ಗೊತ್ತಿಲ್ಲ');
 }
 ```
 
 ### Function
 
 ```javascript
-kelsa greet(name) {
-  helu("Hello " + name);
+kelsa namaskara(hesaru) {
+  helu('ಹಲೋ ' + hesaru + '!');
 }
 
-greet("Pragna");
+namaskara("Pragna");
 ```
 
 ### While
 
 ```javascript
-nenapu count_down = 3;
+nenapu enike = 3;
 
-nijvaga(count_down>0) {
-  helu(count_down--);
+nijvaga(enike>0) {
+  helu(enike--);
 }
 ```
 
-### Prime Number
+### First to Three Wins
 
 ```javascript
-nenapu max_number_checked = 2;
-nenapu prime_numbers = [2];
-
-kelsa is_prime(num) {
-  nijavidre (max_number_checked >= num) {
-    kodu prime_numbers.includes(num);
-  }
-  nijvaga (++max_number_checked <= num) {
-    nenapu prime = true;
-    nenapu x;
-    lup (x of prime_numbers) {
-      nijavidre (max_number_checked % x == 0) {
-        prime = false;
-        nilisu;
-      }
-    }
-    nijavidre (prime) {
-      prime_numbers.push(max_number_checked);
+kelsa padeyiri_vijeta(ankagalu) {
+  nenapu hesaru;
+  lup (hesaru in ankagalu) {
+    nijavidre (ankagalu[hesaru] >= 3) {
+      kodu hesaru;
     }
   }
-  kodu prime_numbers.includes(num);
+  kodu khali;
 }
 
-helu(is_prime(23));
+
+nenapu ankagalu = {'ABC': 3, 'DEF': 1, 'GHI': 2};
+
+nenapu vijeta = padeyiri_vijeta(ankagalu);
+nijavidre (vijeta === khali) {
+  helu('ಇನ್ನೂ ವಿಜೇತರಾಗಿಲ್ಲ ಎಂದು ತೋರುತ್ತಿದೆ!');
+} athava {
+  helu('ವಿಜೇತರು ' + vijeta);
+}
 ```
 
 

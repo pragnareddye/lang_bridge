@@ -1,0 +1,12 @@
+func.get_winner=evaru_gelicharu
+func.greet=swagatham
+msg.announce_winner='విజేత ' + $1
+msg.hello_name='హలో ' + $1 + '!'
+msg.hello_world='హలో వరల్డ్!'
+msg.no_winner='ఇంకా విజేత లేనట్లు కనిపిస్తోంది!'
+msg.unknown_name='నాకు ' + $1 + ' తెలియదు'
+var.counter=lekkimpu
+var.name=peru
+var.names=perlu
+var.scores=markulu
+var.winner=vijeta

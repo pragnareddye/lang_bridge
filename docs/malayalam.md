@@ -7,88 +7,81 @@
 ### Hello
 
 ```javascript
-para("Hello World");
+para('ഹലോ വേൾഡ്!');
 ```
 
 ### Variables
 
 ```javascript
-orma name = "Sai"
+orma peru = "Sai"
 
-// print to screen
-para(name)
+para(peru);
 ```
 
 ### For Loop
 
 ```javascript
-orma names = ["Sai", "Pragna", "Etikyala"]
+orma perukal = ["Sai", "Pragna", "Etikyala"];
 
-// print each name to screen
-lup(name in names) {
-  para(name)
+lup(peru in perukal) {
+  para(peru);
 }
 ```
 
 ### If-Else
 
 ```javascript
-orma name = "Pragna"
+orma peru = "Pragna"
 
-athava (name === "Pragna") {
-  para("Hi Pragna!");
+athava (peru === "Pragna") {
+  para('ഹലോ ' + peru + '!');
 } allenkil {
-  para("I don't know a " + name);
+  para('എനിക്ക് ഒരു ' + peru + ' അറിയില്ല');
 }
 ```
 
 ### Function
 
 ```javascript
-joli greet(name) {
-  para("Hello " + name);
+joli vandanam(peru) {
+  para('ഹലോ ' + peru + '!');
 }
 
-greet("Pragna");
+vandanam("Pragna");
 ```
 
 ### While
 
 ```javascript
-orma count_down = 3;
+orma yennam = 3;
 
-athavumbo(count_down>0) {
-  para(count_down--);
+athavumbo(yennam>0) {
+  para(yennam--);
 }
 ```
 
-### Prime Number
+### First to Three Wins
 
 ```javascript
-orma max_number_checked = 2;
-orma prime_numbers = [2];
-
-joli is_prime(num) {
-  athava (max_number_checked >= num) {
-    ayaki prime_numbers.includes(num);
-  }
-  athavumbo (++max_number_checked <= num) {
-    orma prime = true;
-    orma x;
-    lup (x of prime_numbers) {
-      athava (max_number_checked % x == 0) {
-        prime = false;
-        nikki;
-      }
-    }
-    athava (prime) {
-      prime_numbers.push(max_number_checked);
+joli neduka_vijayi(scorukal) {
+  orma peru;
+  lup (peru in scorukal) {
+    athava (scorukal[peru] >= 3) {
+      ayaki peru;
     }
   }
-  ayaki prime_numbers.includes(num);
+  ayaki illatha;
 }
 
-para(is_prime(23));
+
+orma scorukal = {'ABC': 3, 'DEF': 1, 'GHI': 2};
+
+orma vijayi = neduka_vijayi(scorukal);
+athava (vijayi === illatha) {
+  para('ഇതുവരെ ഒരു വിജയി ഇല്ലെന്ന് തോന്നുന്നു!');
+} allenkil {
+  para('വിജയി ' + vijayi + ' ആണ്');
+}
 ```
 
 

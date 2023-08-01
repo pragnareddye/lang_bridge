@@ -1,4 +1,3 @@
-${var} name = "Sai"
+${var} ${var.name} = "Sai"
 
-// print to screen
-${print}(name)
+${print}(${var.name});

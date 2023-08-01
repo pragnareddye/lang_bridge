@@ -1,7 +1,7 @@
-${var} name = "Pragna"
+${var} ${var.name} = "Pragna"
 
-${if} (name === "Pragna") {
-  ${print}("Hi Pragna!");
+${if} (${var.name} === "Pragna") {
+  ${print}(${msg.hello_name}{${var.name}});
 } ${else} {
-  ${print}("I don't know a " + name);
+  ${print}(${msg.unknown_name}{${var.name}});
 }

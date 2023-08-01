@@ -7,7 +7,7 @@
 ### Hello
 
 ```javascript
-yaqul("Hello World");
+yaqul('Hello World!');
 ```
 
 ### Variables
@@ -15,18 +15,16 @@ yaqul("Hello World");
 ```javascript
 hayz name = "Sai"
 
-// print to screen
-yaqul(name)
+yaqul(name);
 ```
 
 ### For Loop
 
 ```javascript
-hayz names = ["Sai", "Pragna", "Etikyala"]
+hayz names = ["Sai", "Pragna", "Etikyala"];
 
-// print each name to screen
 iilaa(name in names) {
-  yaqul(name)
+  yaqul(name);
 }
 ```
 
@@ -36,7 +34,7 @@ iilaa(name in names) {
 hayz name = "Pragna"
 
 sahihun (name === "Pragna") {
-  yaqul("Hi Pragna!");
+  yaqul('Hello ' + name + '!');
 } akhar {
   yaqul("I don't know a " + name);
 }
@@ -46,7 +44,7 @@ sahihun (name === "Pragna") {
 
 ```javascript
 eamil greet(name) {
-  yaqul("Hello " + name);
+  yaqul('Hello ' + name + '!');
 }
 
 greet("Pragna");
@@ -55,40 +53,35 @@ greet("Pragna");
 ### While
 
 ```javascript
-hayz count_down = 3;
+hayz counter = 3;
 
-eindama(count_down>0) {
-  yaqul(count_down--);
+eindama(counter>0) {
+  yaqul(counter--);
 }
 ```
 
-### Prime Number
+### First to Three Wins
 
 ```javascript
-hayz max_number_checked = 2;
-hayz prime_numbers = [2];
-
-eamil is_prime(num) {
-  sahihun (max_number_checked >= num) {
-    yueti prime_numbers.includes(num);
-  }
-  eindama (++max_number_checked <= num) {
-    hayz prime = true;
-    hayz x;
-    iilaa (x of prime_numbers) {
-      sahihun (max_number_checked % x == 0) {
-        prime = false;
-        nilisu;
-      }
-    }
-    sahihun (prime) {
-      prime_numbers.push(max_number_checked);
+eamil get_winner(scores) {
+  hayz name;
+  iilaa (name in scores) {
+    sahihun (scores[name] >= 3) {
+      yueti name;
     }
   }
-  yueti prime_numbers.includes(num);
+  yueti farigh;
 }
 
-yaqul(is_prime(23));
+
+hayz scores = {'ABC': 3, 'DEF': 1, 'GHI': 2};
+
+hayz winner = get_winner(scores);
+sahihun (winner === farigh) {
+  yaqul("Looks like there isn't a winner just yet!");
+} akhar {
+  yaqul('The winner is ' + winner);
+}
 ```
 
 

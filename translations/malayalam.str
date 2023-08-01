@@ -1,0 +1,12 @@
+func.get_winner=neduka_vijayi
+func.greet=vandanam
+msg.announce_winner='വിജയി ' + $1 + ' ആണ്'
+msg.hello_name='ഹലോ ' + $1 + '!'
+msg.hello_world='ഹലോ വേൾഡ്!'
+msg.no_winner='ഇതുവരെ ഒരു വിജയി ഇല്ലെന്ന് തോന്നുന്നു!'
+msg.unknown_name='എനിക്ക് ഒരു ' + $1 + ' അറിയില്ല'
+var.counter=yennam
+var.name=peru
+var.names=perukal
+var.scores=scorukal
+var.winner=vijayi

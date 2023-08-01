@@ -1,5 +1,5 @@
-${function} greet(name) {
-  ${print}("Hello " + name);
+${function} ${func.greet}(${var.name}) {
+  ${print}(${msg.hello_name}{${var.name}});
 }
 
-greet("Pragna");
+${func.greet}("Pragna");

@@ -1,7 +1,7 @@
 'lang sweet.js';
 
 // null
-export syntax khali = ctx => #`null`
+export syntax khaali = ctx => #`null`
 
 // true
 export syntax nijam = ctx => #`true`
@@ -10,7 +10,7 @@ export syntax nijam = ctx => #`true`
 export syntax tappu = ctx => #`false`
 
 // var
-export syntax nilva = ctx => #`var`
+export syntax gurthunchuko = ctx => #`var`
 
 // while
 export syntax unnapudu = ctx => #`while`
@@ -19,22 +19,22 @@ export syntax unnapudu = ctx => #`while`
 export syntax cheppu = ctx => #`console.log ${ctx.next().value}`
 
 // prompt (only works on browser right now)
-export syntax adagu = ctx => #`prompt ${ctx.next().value}`
+export syntax adugu = ctx => #`prompt ${ctx.next().value}`
 
 // function
 export syntax pani = ctx => #`function`
 
 // for and foreach loop
-export syntax kosam = ctx => #`for`
+export syntax prathi = ctx => #`for`
 
 // return
-export syntax tirigi = ctx => #`return ${ctx.next().value}`
+export syntax pampinchu = ctx => #`return ${ctx.next().value}`
 
 // break
 export syntax aapu = ctx => #`break`;
 
 // if
-export syntax ayite = ctx => {
+export syntax okavela = ctx => {
   var readIf = true;
   var count = 2;
   var result = #`if ${ctx.next().value} ${ctx.next().value} `;
@@ -47,8 +47,8 @@ export syntax ayite = ctx => {
         !possible_else_or_elseif.value.value || !possible_if_or_else_block) {
       break;
     }
-    if (possible_else_or_elseif.value.value.token.value === "mari") {
-      if (possible_if_or_else_block.value.value && possible_if_or_else_block.value.value.token.value === "ayite") {
+    if (possible_else_or_elseif.value.value.token.value === "lekunte") {
+      if (possible_if_or_else_block.value.value && possible_if_or_else_block.value.value.token.value === "okavela") {
         count +=4
         result = result.concat(#`else if ${ctx.next().value} ${ctx.next().value} `);
         readIf = true;

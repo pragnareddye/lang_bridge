@@ -1,0 +1,19 @@
+${function} ${func.get_winner}(${var.scores}) {
+  ${var} ${var.name};
+  ${for} (${var.name} in ${var.scores}) {
+    ${if} (${var.scores}[${var.name}] >= 3) {
+      ${return} ${var.name};
+    }
+  }
+  ${return} ${null};
+}
+
+
+${var} ${var.scores} = {'ABC': 3, 'DEF': 1, 'GHI': 2};
+
+${var} ${var.winner} = ${func.get_winner}(${var.scores});
+${if} (${var.winner} === ${null}) {
+  ${print}(${msg.no_winner});
+} ${else} {
+  ${print}(${msg.announce_winner}{${var.winner}});
+}

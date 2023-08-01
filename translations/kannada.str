@@ -1,0 +1,12 @@
+func.get_winner=padeyiri_vijeta
+func.greet=namaskara
+msg.announce_winner='ವಿಜೇತರು ' + $1
+msg.hello_name='ಹಲೋ ' + $1 + '!'
+msg.hello_world='ಹಲೋ ವರ್ಲ್ಡ್!'
+msg.no_winner='ಇನ್ನೂ ವಿಜೇತರಾಗಿಲ್ಲ ಎಂದು ತೋರುತ್ತಿದೆ!'
+msg.unknown_name='ನನಗೆ ' + $1 + ' ಗೊತ್ತಿಲ್ಲ'
+var.counter=enike
+var.name=hesaru
+var.names=hesarugalu
+var.scores=ankagalu
+var.winner=vijeta

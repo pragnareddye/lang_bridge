@@ -1,6 +1,5 @@
-${var} names = ["Sai", "Pragna", "Etikyala"]
+${var} ${var.names} = ["Sai", "Pragna", "Etikyala"];
 
-// print each name to screen
-${for}(name in names) {
-  ${print}(name)
+${for}(${var.name} in ${var.names}) {
+  ${print}(${var.name});
 }

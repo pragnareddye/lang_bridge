@@ -7,106 +7,99 @@
 ### Hello
 
 ```javascript
-cheppu("Hello World");
+cheppu('హలో వరల్డ్!');
 ```
 
 ### Variables
 
 ```javascript
-nilva name = "Sai"
+gurthunchuko peru = "Sai"
 
-// print to screen
-cheppu(name)
+cheppu(peru);
 ```
 
 ### For Loop
 
 ```javascript
-nilva names = ["Sai", "Pragna", "Etikyala"]
+gurthunchuko perlu = ["Sai", "Pragna", "Etikyala"];
 
-// print each name to screen
-kosam(name in names) {
-  cheppu(name)
+prathi(peru in perlu) {
+  cheppu(peru);
 }
 ```
 
 ### If-Else
 
 ```javascript
-nilva name = "Pragna"
+gurthunchuko peru = "Pragna"
 
-ayite (name === "Pragna") {
-  cheppu("Hi Pragna!");
-} mari {
-  cheppu("I don't know a " + name);
+okavela (peru === "Pragna") {
+  cheppu('హలో ' + peru + '!');
+} lekunte {
+  cheppu('నాకు ' + peru + ' తెలియదు');
 }
 ```
 
 ### Function
 
 ```javascript
-pani greet(name) {
-  cheppu("Hello " + name);
+pani swagatham(peru) {
+  cheppu('హలో ' + peru + '!');
 }
 
-greet("Pragna");
+swagatham("Pragna");
 ```
 
 ### While
 
 ```javascript
-nilva count_down = 3;
+gurthunchuko lekkimpu = 3;
 
-unnapudu(count_down>0) {
-  cheppu(count_down--);
+unnapudu(lekkimpu>0) {
+  cheppu(lekkimpu--);
 }
 ```
 
-### Prime Number
+### First to Three Wins
 
 ```javascript
-nilva max_number_checked = 2;
-nilva prime_numbers = [2];
-
-pani is_prime(num) {
-  ayite (max_number_checked >= num) {
-    tirigi prime_numbers.includes(num);
-  }
-  unnapudu (++max_number_checked <= num) {
-    nilva prime = true;
-    nilva x;
-    kosam (x of prime_numbers) {
-      ayite (max_number_checked % x == 0) {
-        prime = false;
-        aapu;
-      }
-    }
-    ayite (prime) {
-      prime_numbers.push(max_number_checked);
+pani evaru_gelicharu(markulu) {
+  gurthunchuko peru;
+  prathi (peru in markulu) {
+    okavela (markulu[peru] >= 3) {
+      pampinchu peru;
     }
   }
-  tirigi prime_numbers.includes(num);
+  pampinchu khaali;
 }
 
-cheppu(is_prime(23));
+
+gurthunchuko markulu = {'ABC': 3, 'DEF': 1, 'GHI': 2};
+
+gurthunchuko vijeta = evaru_gelicharu(markulu);
+okavela (vijeta === khaali) {
+  cheppu('ఇంకా విజేత లేనట్లు కనిపిస్తోంది!');
+} lekunte {
+  cheppu('విజేత ' + vijeta);
+}
 ```
 
 
 ## Keywords
 
-`ayite`: if
+`okavela`: if
 
-`mari`: else
+`lekunte`: else
 
 `unnapudu`: while
 
 `cheppu`: print
 
-`tirigi`: return
+`pampinchu`: return
 
 `aapu`: break
 
-`konasagincu`: continue
+`konasaginchu`: continue
 
 `nijam`: true
 
@@ -114,12 +107,12 @@ cheppu(is_prime(23));
 
 `cheyyu`: do
 
-`nilva`: var
+`gurthunchuko`: var
 
-`khali`: null
+`khaali`: null
 
 `pani`: function
 
-`kosam`: for
+`prathi`: for
 
-`adagu`: input
+`adugu`: input

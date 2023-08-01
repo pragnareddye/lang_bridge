@@ -1,5 +1,68 @@
 const fs = require("fs");
 
+function template_content(template, args) {
+  var content = template;
+  for (var key of Object.keys(args)) {
+    content = content.replaceAll(`\${${key}}`, args[key]);
+  }
+  return content;
+}
+
+function template_arged_content(template, args) {
+  var content = template;
+  for (var key in args) {
+    if (args[key].includes('$1')) {
+      var regex_pattern = `\\$\\{${key}\\}\\{([^\\{\\}]*)\\}`;
+      content = content.replaceAll(new RegExp(regex_pattern, 'g'), args[key]);
+    } else {
+      content = content.replaceAll(`\${${key}}`, args[key]);
+    }
+  }
+  return content;
+}
+
+function parse_translations(data) {
+  keywords = {};
+  lines = data.split(/\r?\n/);
+  lines.forEach(line => {
+    parts = line.split(/ *= */);
+    keywords[parts[0]] = parts[1];
+  });
+  return keywords;
+}
+
+function get_translations(language) {
+  var translations = parse_translations(fs.readFileSync(
+    './translations/default.str', 'utf8'));
+  var language_translations_file = `./translations/${language}.str`;
+  if (fs.existsSync(language_translations_file)) {
+    var override_translations = parse_translations(fs.readFileSync(
+      language_translations_file, 'utf8'));
+    for (var key in override_translations) {
+      if (override_translations[key]) {
+        translations[key] = override_translations[key];
+      }
+    }
+  }
+  return translations;
+}
+
+function translate(template, language) {
+  var translations = get_translations(language);
+  var msgs = {};
+  var misc = {};
+  for (var key in translations) {
+    if (key.startsWith('msg.')) {
+      msgs[key] = translations[key];
+    } else {
+      misc[key] = translations[key];
+    }
+  }
+  var content = template_content(template, misc);
+  content = template_arged_content(content, msgs);
+  return content;
+}
+
 function generate_cpp_map(language, keywords) {
   const language_upper = language.toUpperCase();
   var content = fs.readFileSync('./src/builder/templates/cpp.template', 'utf8');
@@ -32,6 +95,7 @@ function generate_samples(language, keywords) {
     for (var key of Object.keys(keywords)) {
       content = content.replaceAll(`\${${key}}`, keywords[key]);
     }
+    content = translate(content, language);
     samples[file.split('.')[1]] = content;
   });
   return samples;
