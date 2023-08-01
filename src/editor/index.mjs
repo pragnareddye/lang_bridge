@@ -100,6 +100,8 @@ let executeCode = () => {
     // Clear previous output
     output.dispatch({ changes: { from: 0, to: output.state.doc.length, insert: "" } });
 
+    const transpile_only = document.getElementById('transpile_only').checked;
+
     // Generate Transpiled Code
     // Sweet Compile currently has a bug that causes bad export statements that are 
     // generated for every individual new keyword. To prevent this from showing up
@@ -108,27 +110,60 @@ let executeCode = () => {
     // eliminate everything before it.
     const unique_separator = '\n\nconsole.log("unique61073746separator");\n\n';
     const unique_separator_regex = /console\.log\(['"]unique61073746separator['"]\);?\n/
+    const unique_console_logger = transpile_only ?
+      'console.log' : '___unique___console___24177___.log';
     var sweet_code =
-      lang_bridge_constants[languages_selector.value].js_lib + unique_separator + code;
+      lang_bridge_constants[languages_selector.value].js_lib.
+        replaceAll('console.log', unique_console_logger) +
+      unique_separator + code;
     var transpiled = sweetCompile(sweet_code, null);
     transpiled.code = transpiled.code.split(unique_separator_regex)[1];
+    // Sweet JS doesn't support async and await syntax but simply considers them stand
+    // alone tokens. Merging them with the following content should allow a valid
+    // evaluation of the resultant code.
+    transpiled.code = transpiled.code.replaceAll(/([\n=][ \t]*async);\n[ \t]*/g, '$1 ');
+    transpiled.code = transpiled.code.replaceAll(/(^[ \t]*async);\n[ \t]*/g, '$1 ');
+    transpiled.code = transpiled.code.replaceAll(/([\n=][ \t]*await);\n[ \t]*/g, '$1 ');
+    transpiled.code = transpiled.code.replaceAll(/(^[ \t]*await);\n[ \t]*/g, '$1 ');
 
-    if (!document.getElementById('transpile_only').checked) {
+    if (!transpile_only) {
       // Execute code and capture console output
       var consoleLog = [];
       var consoleError = [];
       var consoleOutput = {
         log: function (message) {
           consoleLog.push(message);
+          this.push();
         },
         error: function (message) {
           consoleError.push(message);
+          this.push();
+        },
+        push: function () {
+          // Display console output
+          output.dispatch({
+            changes: {
+              from: 0, to: output.state.doc.length, insert: "// Output:\n" +
+                consoleLog.join("\n") + "\n" +
+                "//Errors:\n" +
+                consoleError.join("\n")
+            }
+          });
         }
       };
-      var consoleReference = console;
-      console = consoleOutput;
+      // All program outputs when possible will be pushed to the unique console.
+      // If the code still contains the string 'console.log' we'll try and at
+      // least capture the program's synchronous outputs.
+      var ___unique___console___24177___ = consoleOutput;
+      const contains_console_log = transpiled.code.includes('console.log');
+      if (contains_console_log) {
+        var consoleReference = console;
+        console = ___unique___console___24177___;
+      }
       eval(transpiled.code);
-      console = consoleReference;
+      if (contains_console_log) {
+        console = consoleReference;
+      }
 
       // Display console output
       output.dispatch({
