@@ -60,6 +60,23 @@ unnapudu(lekkimpu>0) {
 }
 ```
 
+### Async-Await
+
+```javascript
+samakalikarana pani sahanaanni_pariksincandi() {
+
+  gurthunchuko vagdanam = kotta Vagdanam((pariskarincandi, tiraskarincandi) => {
+    amalu_tarvata(() => pariskarincandi('నేను 2 సెకన్లు ఓపిక పట్టాను!'), 2000)
+  });
+
+  gurthunchuko samadhanam = veci_undandi vagdanam;
+
+  cheppu(samadhanam);
+}
+
+sahanaanni_pariksincandi();
+```
+
 ### First to Three Wins
 
 ```javascript

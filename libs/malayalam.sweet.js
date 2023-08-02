@@ -33,6 +33,21 @@ export syntax ayaki = ctx => #`return ${ctx.next().value}`
 // break
 export syntax nikki = ctx => #`break`;
 
+// async
+export syntax asamanvitha = ctx => #`async`;
+
+// await
+export syntax kaathirikku = ctx => #`await`;
+
+// new
+export syntax puthiya = ctx => #`new`;
+
+// promise
+export syntax Vaagdaanam = ctx => #`Promise`;
+
+// exec_after
+export syntax pinneede = ctx => #`setTimeout`;
+
 // if
 export syntax athava = ctx => {
   var readIf = true;

@@ -60,6 +60,23 @@ eindama(counter>0) {
 }
 ```
 
+### Async-Await
+
+```javascript
+ghayr_mutazamin eamil test_patience() {
+
+  hayz promise = jadid Yueadu((resolve, reject) => {
+    alqiam_baed(() => resolve("I'm patient for 2 seconds!"), 2000)
+  });
+
+  hayz result = antazir promise;
+
+  yaqul(result);
+}
+
+test_patience();
+```
+
 ### First to Three Wins
 
 ```javascript

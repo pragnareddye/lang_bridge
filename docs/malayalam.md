@@ -60,6 +60,23 @@ athavumbo(yennam>0) {
 }
 ```
 
+### Async-Await
+
+```javascript
+asamanvitha joli kshama_pareekshikku() {
+
+  orma vaagdaanam = puthiya Vaagdaanam((pariharikkuka, nirasikkuka) => {
+    pinneede(() => pariharikkuka('ഞാൻ 2 സെക്കൻഡ് ക്ഷമയോടെ'), 2000)
+  });
+
+  orma utharam = kaathirikku vaagdaanam;
+
+  para(utharam);
+}
+
+kshama_pareekshikku();
+```
+
 ### First to Three Wins
 
 ```javascript

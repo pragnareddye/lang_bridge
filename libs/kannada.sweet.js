@@ -33,6 +33,21 @@ export syntax kodu = ctx => #`return ${ctx.next().value}`
 // break
 export syntax nilisu = ctx => #`break`;
 
+// async
+export syntax asamakalika = ctx => #`async`;
+
+// await
+export syntax nirikshisi = ctx => #`await`;
+
+// new
+export syntax hosa = ctx => #`new`;
+
+// promise
+export syntax Bharavase = ctx => #`Promise`;
+
+// exec_after
+export syntax nantara_maadi = ctx => #`setTimeout`;
+
 // if
 export syntax nijavidre = ctx => {
   var readIf = true;
@@ -64,7 +79,7 @@ export syntax nijavidre = ctx => {
 }
 
 //do while
-export syntax madu = ctx => {
+export syntax maadu = ctx => {
   let do_block = ctx.next().value;
   let while_keyword = ctx.next().value;
   if(while_keyword && while_keyword.value.token.value === "nijvaga") {

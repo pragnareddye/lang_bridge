@@ -60,6 +60,23 @@ nijvaga(enike>0) {
 }
 ```
 
+### Async-Await
+
+```javascript
+asamakalika kelsa talmeyannu_parikshisi() {
+
+  nenapu bharavase = hosa Bharavase((pariharisalu, tiraskarisi) => {
+    nantara_maadi(() => pariharisalu('ನಾನು 2 ಸೆಕೆಂಡುಗಳ ಕಾಲ ತಾಳ್ಮೆಯಿಂದಿದ್ದೇನೆ!'), 2000)
+  });
+
+  nenapu uttara = nirikshisi bharavase;
+
+  helu(uttara);
+}
+
+talmeyannu_parikshisi();
+```
+
 ### First to Three Wins
 
 ```javascript
@@ -105,7 +122,7 @@ nijavidre (vijeta === khali) {
 
 `thapu`: false
 
-`madu`: do
+`maadu`: do
 
 `nenapu`: var
 

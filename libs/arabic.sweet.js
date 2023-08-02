@@ -33,6 +33,21 @@ export syntax yueti = ctx => #`return ${ctx.next().value}`
 // break
 export syntax nilisu = ctx => #`break`;
 
+// async
+export syntax ghayr_mutazamin = ctx => #`async`;
+
+// await
+export syntax antazir = ctx => #`await`;
+
+// new
+export syntax jadid = ctx => #`new`;
+
+// promise
+export syntax Yueadu = ctx => #`Promise`;
+
+// exec_after
+export syntax alqiam_baed = ctx => #`setTimeout`;
+
 // if
 export syntax sahihun = ctx => {
   var readIf = true;

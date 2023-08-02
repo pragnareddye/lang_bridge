@@ -33,6 +33,21 @@ export syntax ${return} = ctx => #`return ${ctx.next().value}`
 // break
 export syntax ${break} = ctx => #`break`;
 
+// async
+export syntax ${async} = ctx => #`async`;
+
+// await
+export syntax ${await} = ctx => #`await`;
+
+// new
+export syntax ${new} = ctx => #`new`;
+
+// promise
+export syntax ${promise} = ctx => #`Promise`;
+
+// exec_after
+export syntax ${exec_after} = ctx => #`setTimeout`;
+
 // if
 export syntax ${if} = ctx => {
   var readIf = true;
