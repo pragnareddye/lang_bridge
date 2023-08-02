@@ -1,0 +1,18 @@
+function hljs_language_augment() {
+  hljs.getLanguage('javascript').keywords['${true}'] = hljs.getLanguage('javascript').keywords['true'];
+  hljs.getLanguage('javascript').keywords['${false}'] = hljs.getLanguage('javascript').keywords['false'];
+  hljs.getLanguage('javascript').keywords['${null}'] = hljs.getLanguage('javascript').keywords['null'];
+  hljs.getLanguage('javascript').keywords['${var}'] = hljs.getLanguage('javascript').keywords['var'];
+  hljs.getLanguage('javascript').keywords['${async}'] = hljs.getLanguage('javascript').keywords['async'];
+  hljs.getLanguage('javascript').keywords['${await}'] = hljs.getLanguage('javascript').keywords['await'];
+  hljs.getLanguage('javascript').keywords['${if}'] = hljs.getLanguage('javascript').keywords['if'];
+  hljs.getLanguage('javascript').keywords['${else}'] = hljs.getLanguage('javascript').keywords['else'];
+  hljs.getLanguage('javascript').keywords['${for}'] = hljs.getLanguage('javascript').keywords['for'];
+  hljs.getLanguage('javascript').keywords['${do}'] = hljs.getLanguage('javascript').keywords['do'];
+  hljs.getLanguage('javascript').keywords['${while}'] = hljs.getLanguage('javascript').keywords['while'];
+  hljs.getLanguage('javascript').keywords['${break}'] = hljs.getLanguage('javascript').keywords['break'];
+  hljs.getLanguage('javascript').keywords['${continue}'] = hljs.getLanguage('javascript').keywords['continue'];
+  hljs.getLanguage('javascript').keywords['${function}'] = hljs.getLanguage('javascript').keywords['function'];
+  hljs.getLanguage('javascript').keywords['${return}'] = hljs.getLanguage('javascript').keywords['return'];
+  hljs.getLanguage('javascript').keywords['${new}'] = hljs.getLanguage('javascript').keywords['new'];
+}

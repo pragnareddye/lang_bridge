@@ -17,12 +17,12 @@ html, body {
         padding:0.7em;
         margin:auto;
         max-width:42em;
-        background:#fefefe;
+        background:#1e293b;
 	}
 body {
-	/* font: 1.3em "Vollkorn", Palatino, Times; */
+	/* font: 1.3em "Vollkorn", Palatino, Times;*/
 	font: 1.1em ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-	color: #333;
+	color: #cbd5e1;
 	line-height: 1.4;
 	text-align: justify;
 	}
@@ -40,13 +40,13 @@ footer {
 	}
 video {
 	margin: 2em 0;
-	border:1px solid #ddd;
+	border:1px solid #0f172a;
 	}
 
 nav {
 	font-size: .9em;
 	font-style: italic;
-	border-bottom: 1px solid #ddd;
+	border-bottom: 1px solid #0f172a;
 	padding: 1em 0;
 	}
 nav p {
@@ -84,13 +84,13 @@ ol {
 blockquote {
 	margin-left: 1em;
 	padding-left: 1em;
-	border-left: 1px solid #ddd;
+	border-left: 1px solid #0f172a;
 	}
 code {
-	font-family: "Consolas", "Menlo", "Monaco", monospace, serif;
-	font-size: .9em;
-	background: white;
-	}
+    font-family: "Consolas", "Menlo", "Monaco", monospace, serif;
+    font-size: .9em;
+    background: black;
+    }
 a {
 	color: #2484c1;
 	text-decoration: none;
@@ -102,7 +102,7 @@ a img {
 	border:none;
 	}
 h1 a, h1 a:hover {
-	color: #333;
+	color: white;
 	text-decoration: none;
 	}
 hr {
@@ -118,7 +118,7 @@ p#heart{
 	font-size: 2em;
 	line-height: 1;
 	text-align: center;
-	color: #ccc;
+	color: black;
 	}
 .red {
 	color:#B50000;
@@ -128,7 +128,7 @@ p#heart{
 --------------------------- */
 
 .hljs{
-	background: #f0f0f0;
+  background: #282c34;
 }
 
 /* Home Page

@@ -1,2 +1,18 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="docs_style.css"
+    media="screen" />
+  <link rel="stylesheet" href="docs_style_dark.css"
+    media="screen and (prefers-color-scheme: dark)" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/atom-one-light.min.css"
+    media="screen" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/atom-one-dark.min.css"
+    media="screen and (prefers-color-scheme: dark)" />
+  <link rel="stylesheet" href="docs_style.css"
+    media="screen" />
+  <link rel="stylesheet" href="docs_style_dark.css"
+    media="screen and (prefers-color-scheme: dark)" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/javascript.min.js"></script>
+  <script src="highligh_js_overrides/${language}.js"></script>
+  <script>hljs.highlightAll();</script>

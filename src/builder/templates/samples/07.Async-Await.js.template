@@ -1,7 +1,10 @@
 ${async} ${function} ${func.test_patience}() {
-
-  ${var} ${var.promise} = ${new} ${promise}((${var.resolve}, ${var.reject}) => {
-    ${exec_after}(() => ${var.resolve}(${msg.patient_for_2_seconds}), 2000)
+  ${var} ${var.promise} = ${new} ${promise}(
+    (${var.resolve}, ${var.reject}) => {
+      ${exec_after}(
+        () => ${var.resolve}(
+          ${msg.patient_for_2_seconds}),
+        2000)
   });
 
   ${var} ${var.result} = ${await} ${var.promise};

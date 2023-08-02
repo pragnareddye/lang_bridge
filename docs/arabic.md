@@ -64,9 +64,12 @@ eindama(counter>0) {
 
 ```javascript
 ghayr_mutazamin eamil test_patience() {
-
-  hayz promise = jadid Yueadu((resolve, reject) => {
-    alqiam_baed(() => resolve("I'm patient for 2 seconds!"), 2000)
+  hayz promise = jadid Yueadu(
+    (resolve, reject) => {
+      alqiam_baed(
+        () => resolve(
+          "I'm patient for 2 seconds!"),
+        2000)
   });
 
   hayz result = antazir promise;

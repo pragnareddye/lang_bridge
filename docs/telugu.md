@@ -64,9 +64,12 @@ unnapudu(lekkimpu>0) {
 
 ```javascript
 samakalikarana pani sahanaanni_pariksincandi() {
-
-  gurthunchuko vagdanam = kotta Vagdanam((pariskarincandi, tiraskarincandi) => {
-    amalu_tarvata(() => pariskarincandi('నేను 2 సెకన్లు ఓపిక పట్టాను!'), 2000)
+  gurthunchuko vagdanam = kotta Vagdanam(
+    (pariskarincandi, tiraskarincandi) => {
+      amalu_tarvata(
+        () => pariskarincandi(
+          'నేను 2 సెకన్లు ఓపిక పట్టాను!'),
+        2000)
   });
 
   gurthunchuko samadhanam = veci_undandi vagdanam;

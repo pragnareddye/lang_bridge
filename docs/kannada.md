@@ -64,9 +64,12 @@ nijvaga(enike>0) {
 
 ```javascript
 asamakalika kelsa talmeyannu_parikshisi() {
-
-  nenapu bharavase = hosa Bharavase((pariharisalu, tiraskarisi) => {
-    nantara_maadi(() => pariharisalu('ನಾನು 2 ಸೆಕೆಂಡುಗಳ ಕಾಲ ತಾಳ್ಮೆಯಿಂದಿದ್ದೇನೆ!'), 2000)
+  nenapu bharavase = hosa Bharavase(
+    (pariharisalu, tiraskarisi) => {
+      nantara_maadi(
+        () => pariharisalu(
+          'ನಾನು 2 ಸೆಕೆಂಡುಗಳ ಕಾಲ ತಾಳ್ಮೆಯಿಂದಿದ್ದೇನೆ!'),
+        2000)
   });
 
   nenapu uttara = nirikshisi bharavase;
