@@ -1,6 +1,6 @@
-func.get_winner=padeyiri_vijeta
+func.get_winner=vijeta_padeyiri
 func.greet=namaskara
-func.test_patience=talmeyannu_parikshisi
+func.test_patience=taalmeyannu_parikshisi
 msg.announce_winner='ವಿಜೇತರು ' + $1
 msg.hello_name='ಹಲೋ ' + $1 + '!'
 msg.hello_world='ಹಲೋ ವರ್ಲ್ಡ್!'
@@ -10,7 +10,7 @@ msg.unknown_name='ನನಗೆ ' + $1 + ' ಗೊತ್ತಿಲ್ಲ'
 var.counter=enike
 var.name=hesaru
 var.names=hesarugalu
-var.promise=bharavase
+var.promise=aane
 var.reject=tiraskarisi
 var.resolve=pariharisalu
 var.result=uttara
